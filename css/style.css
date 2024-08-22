@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #e7e7e7;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    background-color: rgb(56 104 214);
+    padding: 16px 0;
+}
+
+header h1 {
+    color: white;
+    font-style: italic;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    margin: 50px 0;
+}
+
+#sobre .sessao-sobre {
+    display: flex;
+}
+
+#sobre .sessao-sobre img {
+    margin-right: 30px;
+    margin-bottom: 40px;
+}
+
+#sobre h1,
+#produtos h1 {
+    padding-bottom: 16px;
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(56 104 214);
+    border-bottom: 3px solid rgb(56 104 214);
+}
+
+#sobre .sessao-sobre p {
+    padding-top: 40px;
+    font-size: 16px;
+}
+
+#produtos .lista-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    column-gap: 1.3%;
+    margin-top: 40px;
+}
+
+#produtos .lista-produtos img {
+    width: 100%;
+}
+
+#produtos .lista-produtos li {
+    list-style: none;
+}
+
+#produtos .lista-produtos li h3 {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#produtos .lista-produtos li button {
+    margin: 10px 0;
+    display: block;
+    width: 100%;
+    color: white;
+    background-color: rgb(56 104 214);
+    border: 0;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 8px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#produtos .lista-produtos li button:hover {
+    background-color: rgb(27, 68, 163);
+}
+
+@media screen and (min-width:641px) and (max-width:1023px) {
+
+    .container {
+        max-width: 90%;
+    }
+
+    #sobre {
+        margin-bottom: 20px;
+    }
+
+    #sobre .sessao-sobre img {
+        width: 100%;
+    }
+
+    #sobre .sessao-sobre {
+        display: block;
+    }
+
+    #produtos .lista-produtos {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+@media screen and (max-width:640px) {
+
+    .container {
+        max-width: 90%;
+    }
+
+    header nav ul li {
+        display: block;
+    }
+
+    #sobre {
+        margin-bottom: 20px;
+    }
+
+    #sobre .sessao-sobre {
+        display: block;
+    }
+
+    #sobre .sessao-sobre img {
+        width: 100%;
+    }
+
+    #produtos .lista-produtos {
+        display: block;
+    }
+
+    #produtos .lista-produtos li button {
+        margin: 30px 0;
+    }
+}
